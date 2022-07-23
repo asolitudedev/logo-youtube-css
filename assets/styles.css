@@ -1,7 +1,7 @@
 /*=============== ANALYZE ===============*/
-/* Logo size: 20 x 28.57 */
+/* Logo size: 28.57 x 20 */
 /* Arrow size: 7.42 x 8.57 */
-/* Arrow ratio: 857 / 742 ~ 1,15 */
+/* Arrow ratio: 857 / 742 ~ 1.15 */
 
 :root {
   /* SIZE */
@@ -10,31 +10,31 @@
   --arrow-size: 50px;
   --arrow-ratio: 1.15;
 
-  /* COLOR */
+  /* COLORS */
   --color-logo: #FF0000;
   --color-arrow: white;
 }
 
 body {
   height: 100vh;
+  background-color: #333;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #333;
 }
 
 /*=============== LOGO ===============*/
 .logo {
   width: var(--width);
   height: var(--height);
-  position: relative;
+  background-color: var(--color-logo);
   border-radius: 50% / 11%;
-  background: var(--color-logo);
+  position: relative;
 }
 .logo::before {
   content: "";
   position: absolute;
-  background: inherit;
+  background-color: inherit;
   top: 10%;
   bottom: 10%;
   right: -5%;
@@ -57,6 +57,5 @@ body {
   height: 0;
   border-top: var(--arrow-size) solid transparent;
   border-bottom: var(--arrow-size) solid transparent;
-  /* Border-left size ratio: size*ratio */
   border-left: calc(var(--arrow-size) * var(--arrow-ratio)) solid var(--color-arrow);
 }
